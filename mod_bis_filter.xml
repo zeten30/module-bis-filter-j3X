@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="2.5" type="module" method="upgrade" client="site">
+  <name>Modul Filter BIS</name>
+  <author>Milan Zink</author>
+  <creationDate>06/2012</creationDate>
+  <copyright> </copyright>
+  <license>GNU - general public license</license>
+  <authorEmail>zeten30@gmail.com</authorEmail>
+  <version>0.9.0</version>
+  <description>MOD_BIS_FILTER_XML_DESC</description>
+
+  <files>
+    <filename module="mod_bis_filter">mod_bis_filter.php</filename>
+    <filename module="mod_bis_filter">index.html</filename>
+    <filename module="mod_bis_filter">helper.php</filename>
+    <folder module="mod_bis_filter">tmpl</folder>
+    <folder module="mod_bis_filter">css</folder>
+    <folder module="mod_bis_filter">js</folder>
+  </files>
+
+  <languages>
+    <language tag="cs-CZ">cs-CZ.mod_bis_filter.ini</language>
+    <language tag="cs-CZ">cs-CZ.mod_bis_filter.sys.ini</language>
+    <language tag="en-GB">en-GB.mod_bis_filter.ini</language>
+    <language tag="en-GB">en-GB.mod_bis_filter.sys.ini</language>
+  </languages>
+
+  <config>
+    <fields name="params">
+
+      <fieldset name="basic">
+
+        <field name="display-style" type="list" default="table-vertical"
+               label="MOD_BIS_FILTER_DISPLAY_STYLE_LBL"
+               description="MOD_BIS_FILTER_DISPLAY_STYLE_DESC">
+          <option value="table-vertical">MOD_BIS_FILTER_TABLE_VERTICAL</option>
+          <option value="table-horizontal">MOD_BIS_FILTER_TABLE_HORIZONTAL</option>
+        </field>
+        <field name="label-style" type="list" default="left"
+               label="MOD_BIS_FILTER_LABEL_STYLE_LBL"
+               description="MOD_BIS_FILTER_LABEL_STYLE_DESC">
+          <option value="left">MOD_BIS_FILTER_LEFT</option>
+          <option value="top">MOD_BIS_FILTER_TOP</option>
+        </field>
+        <field name="css-class" type="text" default="mod_bis_filter"
+               label="MOD_BIS_FILTER_CSS_CLASS_LBL"
+               description="MOD_BIS_FILTER_CSS_CLASS_DESC" />
+
+      </fieldset>
+
+
+      <fieldset name="filter_settings">
+
+        <field name="show-filter-date" type="list" default="1"
+               label="MOD_BIS_FILTER_DATE_LBL"
+               description="MOD_BIS_FILTER_DATE_DESC">
+          <option value="0">MOD_BIS_FILTER_NO</option>
+          <option value="1">MOD_BIS_FILTER_YES</option>
+        </field>
+        <field name="filter-date-label" type="text" default=""
+               label="MOD_BIS_FILTER_DATE_LABEL_LBL"
+               description="MOD_BIS_FILTER_DATE_LABEL_DESC" />
+        <field name="filter-date-order" type="list" default="1"
+               label="MOD_BIS_FILTER_SHOW_ORDER_LBL"
+               description="MOD_BIS_FILTER_SHOW_ORDER_DESC">
+          <option value="1">1.</option>
+          <option value="2">2.</option>
+          <option value="3">3.</option>
+          <option value="4">4.</option>
+          <option value="5">5.</option>
+        </field>
+
+
+        <field name="show-filter-type" type="list" default="1"
+               label="MOD_BIS_FILTER_TYPE_LBL"
+               description="MOD_BIS_FILTER_TYPE_DESC">
+          <option value="0">MOD_BIS_FILTER_NO</option>
+          <option value="1">MOD_BIS_FILTER_YES</option>
+        </field>
+        <field name="filter-type-label" type="text" default=""
+               label="MOD_BIS_FILTER_TYPE_LABEL_LBL"
+               description="MOD_BIS_FILTER_TYPE_LABEL_DESC" />
+        <field name="filter-type-order" type="list" default="2"
+               label="MOD_BIS_FILTER_SHOW_ORDER_LBL"
+               description="MOD_BIS_FILTER_SHOW_ORDER_DESC">
+          <option value="1">1.</option>
+          <option value="2">2.</option>
+          <option value="3">3.</option>
+          <option value="4">4.</option>
+          <option value="5">5.</option>
+        </field>
+
+
+        <field name="show-filter-for" type="list" default="1"
+               label="MOD_BIS_FILTER_FOR_LBL"
+               description="MOD_BIS_FILTER_FOR_DESC">
+          <option value="0">MOD_BIS_FILTER_NO</option>
+          <option value="1">MOD_BIS_FILTER_YES</option>
+        </field>
+        <field name="filter-for-label" type="text" default=""
+               label="MOD_BIS_FILTER_FOR_LABEL_LBL"
+               description="MOD_BIS_FILTER_FOR_LABEL_DESC" />
+        <field name="filter-for-order" type="list" default="3"
+               label="MOD_BIS_FILTER_SHOW_ORDER_LBL"
+               description="MOD_BIS_FILTER_SHOW_ORDER_DESC">
+          <option value="1">1.</option>
+          <option value="2">2.</option>
+          <option value="3">3.</option>
+          <option value="4">4.</option>
+          <option value="5">5.</option>
+        </field>
+
+
+        <field name="show-filter-program" type="list" default="1"
+               label="MOD_BIS_FILTER_PROGRAM_LBL"
+               description="MOD_BIS_FILTER_PROGRAM_DESC">
+          <option value="0">MOD_BIS_FILTER_NO</option>
+          <option value="1">MOD_BIS_FILTER_YES</option>
+        </field>
+        <field name="filter-program-label" type="text" default=""
+               label="MOD_BIS_FILTER_PROGRAM_LABEL_LBL"
+               description="MOD_BIS_FILTER_PROGRAM_LABEL_DESC" />
+        <field name="filter-program-order" type="list" default="4"
+               label="MOD_BIS_FILTER_SHOW_ORDER_LBL"
+               description="MOD_BIS_FILTER_SHOW_ORDER_DESC">
+          <option value="1">1.</option>
+          <option value="2">2.</option>
+          <option value="3">3.</option>
+          <option value="4">4.</option>
+          <option value="5">5.</option>
+        </field>
+
+        <field name="show-filter-organized" type="list" default="1"
+               label="MOD_BIS_FILTER_ORGANIZED_LBL"
+               description="MOD_BIS_FILTER_ORGANIZED_DESC">
+          <option value="0">MOD_BIS_FILTER_NO</option>
+          <option value="1">MOD_BIS_FILTER_YES</option>
+        </field>
+        <field name="filter-organized-label" type="text" default=""
+               label="MOD_BIS_FILTER_ORGANIZED_LABEL_LBL"
+               description="MOD_BIS_FILTER_ORGANIZED_LABEL_DESC" />
+        <field name="filter-organized-order" type="list" default="5"
+               label="MOD_BIS_FILTER_SHOW_ORDER_LBL"
+               description="MOD_BIS_FILTER_SHOW_ORDER_DESC">
+          <option value="1">1.</option>
+          <option value="2">2.</option>
+          <option value="3">3.</option>
+          <option value="4">4.</option>
+          <option value="5">5.</option>
+        </field>
+
+
+      </fieldset>
+
+    </fields>
+  </config>
+
+</install>
