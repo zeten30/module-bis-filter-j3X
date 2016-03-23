@@ -34,20 +34,20 @@ abstract class Mod_BisFilterHelper {
 
   private function handleStatePostVariable($mainframe, $jinput, $name, $post_name) {
     $var = $mainframe->getUserState($name, '');
-    
+
     if ($var == '') {
       $mainframe->setUserState($name, '');
     }
 
     $post_var = $jinput->get('filter-by-' . $post_name, '##not set##');
-    
+
     if ($post_var != '##not set##') {
       $mainframe->setUserState($name, $post_var);
     }
 
     return $var;
   }
-  
+
   private function getStateVar($name) {
     $mainframe = & JFactory::getApplication();
     return $mainframe->getUserState($name, '');
@@ -101,12 +101,12 @@ abstract class Mod_BisFilterHelper {
   }
 
   private function buildSelectForm($arr, $name, $selected) {
-    
+
     $ret = "<select name=\"filter-by-$name\" id=\"filter-by-$name\" size=\"1\">\n";
     $ret.="<option value=\" \"> </option>\n";
 
     foreach ($arr as $key => $value) {
-            
+
       if ($selected == $key) {
         $mark_selected = 'selected="selected"';
       } else {
@@ -134,7 +134,7 @@ abstract class Mod_BisFilterHelper {
         'ekostan' => 'Ekostan',
         'psb' => 'Prázdniny s Brontosaurem',
         'vzdelavani' => 'Vzdělávání');
-    
+
     $selected=self::getStateVar('state_program');
 
     return self::buildSelectForm($arr, 'program', $selected);
@@ -144,8 +144,9 @@ abstract class Mod_BisFilterHelper {
 
     $arr = array('dospeli' => 'Pro dospělé',
         'deti' => 'Pro děti',
-        'detirodice' => 'Pro rodiče s dětmi');
-    
+        'detirodice' => 'Pro rodiče s dětmi',
+        'prvouc' => 'Prvoúčastníky');
+
     $selected=self::getStateVar('state_for');
 
     return self::buildSelectForm($arr, 'for', $selected);
@@ -159,7 +160,7 @@ abstract class Mod_BisFilterHelper {
         'vzdelavaci' => 'Vzdělávací',
         'prednaska' => 'Přednáška',
         'verejnost' => 'Pro veřejnost');
-    
+
     $selected=self::getStateVar('state_type');
 
     return self::buildSelectForm($arr, 'type', $selected);
@@ -168,7 +169,7 @@ abstract class Mod_BisFilterHelper {
   private function controlDate() {
     $from=self::getStateVar('state_date_from');
     $to=self::getStateVar('state_date_to');
-    
+
     $ret = "<input name=\"filter-by-date\"
       id=\"filter-by-date\"
       value=\"$from\" />\n";
