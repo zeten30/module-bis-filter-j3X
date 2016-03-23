@@ -145,7 +145,7 @@ abstract class Mod_BisFilterHelper {
     $arr = array('dospeli' => 'Pro dospělé',
         'deti' => 'Pro děti',
         'detirodice' => 'Pro rodiče s dětmi',
-        'prvouc' => 'Prvoúčastníky');
+        'prvouc' => 'Jedu poprvé');
 
     $selected=self::getStateVar('state_for');
 
